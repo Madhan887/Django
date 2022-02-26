@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+          .center
+        {
+            Margin: auto;
+            border:1px solid black;
+            width:350px;
+            text-align: center;
+            background-color: aqua;
+            padding: 10px;
+        }
+        body{
+            background-color: aquamarine;
+        }
+    </style>
+</head>
+<body>
+    <div class="center">
+    <form method="POST">
+        {% csrf_token %}
+        <div>
+            <label>
+                UserName
+            </label><br>
+            <input type="text" name="Name">
+        </div><br>
+        <div>
+            <lable>
+                DOB
+            </lable><br>
+            <input type="date" name="DOB">
+        </div><br>
+        <div>
+            <label>
+                Address
+            </label><br>
+            <textarea name="Address"></textarea>
+        </div><br>
+        <div>
+            <label>
+                Phone
+            </label><br>
+            <input type="number" name="Phone">    
+        </div><br>
+        <div>
+            <label>Email</label><br>
+            <input type="email" name="Email">
+        </div><br>
+    
+        <div>
+            <label>Password</label><br>
+            <input type="password" name="Password" id="pass">
+        </div><br>
+
+        <div>
+            <label>Confirm Password</label><br>
+            <input type="password" name="CPassword" id="chk" >
+        </div><br>
+
+        <div>
+            <input type="submit" id="d">
+        </div>
+    </form>
+    <div>
+        <p>Already have an account?</p><a href="/Login">Login</a>
+    </div>
+    </div>
+</body>
+</html>

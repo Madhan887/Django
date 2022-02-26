@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .center
+        {
+            Margin: auto;
+            border:1px solid black;
+            width:300px;
+            text-align: center;
+            background-color: aqua;
+        }
+        body{
+            background-color: aquamarine;
+        }
+    </style>
+</head>
+<body>
+    <div class="center">
+    <form method='POST'>
+        {% csrf_token %}
+    <div>
+        <label>Username</label><br>
+        <input type="text" name="Name">
+    </div>
+
+    <div>
+        <label>Password</label><br>
+        <input type="password" name="Password">
+    </div><br>
+
+    
+    <div>
+        <input type="submit" value="Login">
+    </div>
+    </form>
+
+    <div>
+        <p>Don't have an account</p><a href="/create">create</a>
+    </div>
+    </div>
+</body>
+</html>
